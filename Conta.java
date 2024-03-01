@@ -1,20 +1,20 @@
 import java.util.Scanner;
 
-public class ContaCorrente {
+public class Conta {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Conta[] conta = new Conta[2];
+        ContaCorrente[] conta = new ContaCorrente[2];
 
         //Dados Conta 1
-        conta[0] = new Conta();
+        conta[0] = new ContaCorrente();
         conta[0].nome = "Hugo Machado";
         conta[0].cpf = "487.654.364-45";
         conta[0].nmrConta = 458673;
         conta[0].telefone = "64 99345-7458";
         conta[0].saldo = 500.00;
 
-        conta[1] = new Conta();
+        conta[1] = new ContaCorrente();
         conta[1].nome = "Rockye Junior";
         conta[1].cpf = "125.753.121-92";
         conta[1].telefone = "64 99341-0158";
@@ -62,8 +62,11 @@ public class ContaCorrente {
                     System.out.println("Saldo Insuficiente para Realizar a transacao");
                 }
             }
-            else{
+            else if(op == 0){
                 System.out.println("Sessão Finalizada");
+            }
+            else{
+                System.out.println("Opção nao valida! escolha novamente!");
             }
         } while(op != 0);
         
