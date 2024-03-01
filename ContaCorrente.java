@@ -1,4 +1,4 @@
-class Conta {
+class ContaCorrente {
     String nome;
     String cpf;
     int nmrConta;
